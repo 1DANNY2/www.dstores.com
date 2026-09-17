@@ -1,6 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelector(".slides");
+  const images = document.querySelectorAll(".slides img");
+
+  currentSlide += direction;
+
+  if (currentSlide >= images.length) {
+    currentSlide = 0;
+  }
+
+  if (currentSlide < 0) {
+    currentSlide = images.length - 1;
+  }
+
+  slides.style.transform =
+    `translateX(-${currentSlide * 100}%)`;
+}
+
+// Automatic sliding every 4 seconds
+setInterval(() => {
+  moveSlide(1);
+}, 4000);
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Danny Stores - online shopping in Zambia. Clothes, fashion and more.">
