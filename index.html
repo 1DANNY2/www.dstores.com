@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Danny Stores - online shopping in Zambia. Clothes, fashion and more.">
+  <title>Danny Stores | Shop Online in Zambia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="perks">Free delivery options • Secure shopping • Zambian Kwacha pricing</div>
+  <nav>
+    <a class="logo" href="#home">DANNY <span>STORES</span></a>
+    <div class="navlinks">
+      <a href="#home">Home</a><a href="#clothes">Clothes</a><a href="#categories">Categories</a>
+      <a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+    <button class="cart-btn" onclick="openCart()">🛒 Cart <b id="cartCount">0</b></button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div><p class="eyebrow">DANNY STORES • ZAMBIA</p><h1>Style that moves<br><span>with you.</span></h1>
+  <p>Discover clothing and everyday products in one modern online store.</p>
+  <a class="button" href="#clothes">Shop Clothes</a></div>
+  <div class="hero-card"><span>NEW ARRIVALS</span><strong>MEN'S<br>FASHION</strong><small>Prices in Zambian Kwacha (K)</small></div>
+</section>
+
+<section id="categories" class="section">
+  <div class="section-head"><div><p class="eyebrow">EXPLORE</p><h2>Shop by category</h2></div></div>
+  <div class="categories"><button onclick="scrollToClothes()">👕 Clothes</button><button onclick="scrollToClothes()">👖 Trousers</button><button onclick="scrollToClothes()">👟 Fashion</button><button onclick="scrollToClothes()">🔥 Deals</button></div>
+</section>
+
+<section id="clothes" class="section">
+  <div class="section-head">
+    <div><p class="eyebrow">CLOTHES</p><h2>Featured fashion</h2><p>Swipe, drag or use the arrows to browse.</p></div>
+    <div class="slider-controls"><button onclick="slide(-1)">←</button><button onclick="slide(1)">→</button></div>
+  </div>
+  <div class="carousel-wrap"><div id="carousel" class="carousel"></div></div>
+</section>
+
+<section class="promo section"><div><p class="eyebrow">DANNY STORES</p><h2>Easy shopping in Kwacha.</h2><p>Choose your products, add them to your cart and continue to checkout.</p></div><a class="button" href="#clothes">Browse products</a></section>
+
+<section id="about" class="section info"><div><p class="eyebrow">ABOUT</p><h2>Built for online shopping.</h2><p>Danny Stores is designed for customers in Zambia, with responsive shopping, product browsing, cart management and checkout options.</p></div>
+<div class="features"><div>🔒 <b>Secure-ready</b><small>HTTPS-ready deployment and safer checkout architecture.</small></div><div>📦 <b>Orders</b><small>Cart and order flow prepared for delivery management.</small></div><div>💬 <b>Support</b><small>WhatsApp and email contact available.</small></div></div></section>
+
+<section id="contact" class="section contact"><p class="eyebrow">CONTACT</p><h2>Need help?</h2><p>Email: <a href="mailto:drlldanny@gmail.com">drlldanny@gmail.com</a></p><p>WhatsApp: <a href="https://wa.me/260977388313">0977388313</a></p><p>Facebook: <b>AngelDanny Liche</b></p></section>
+</main>
+
+<footer><b>DANNY STORES</b><span>© 2026 Danny Stores • Zambia</span><span>Privacy • Terms • Cookies</span></footer>
+
+<div id="cartDrawer" class="drawer"><div class="drawer-head"><h2>Your Cart</h2><button onclick="closeCart()">×</button></div><div id="cartItems"></div><div class="cart-total">Total: <b id="cartTotal">K0.00</b></div><button class="checkout" onclick="checkout()">Proceed to Checkout</button></div>
+<div id="shade" class="shade" onclick="closeCart()"></div>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
